@@ -13,8 +13,8 @@
         <% if entry["user_id"] == @user["id"]%>
           <h3><%= entry["title"] %></h3>
           <h4><%= entry["occurred_on"] %></h4>
-         <img src="https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg"  class="img-fluid">
-         <!-- "<%= entry["image"] %>"-->
+         <!-- <img src="https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg"  class="img-fluid"> -->
+         <img src="<%= url_for(entry.uploaded_image) %>" class="img-fluid">
           <p><%= entry["description"] %></p>
         <% end %>
       </div>
