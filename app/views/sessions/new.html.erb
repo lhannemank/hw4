@@ -1,12 +1,26 @@
-<h1>Login</h1>
+<h1 class=mb-3>Login</h1>
 
-<form action="/sessions" method="post">
+<form action="/entries" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="place_id" value="<%= params["place_id"] %>">
+
+
+<form class=mb-3 action="/sessions" method="post">
+    <div class="mb-3">
+      <label for="email_input" class="form-label">Email</label>
+      <input type="text" name="email" id="email_input" class="form-control">
+
+     <label for="password_input" class="form-label">Password</label>
+      <input type="password" name="password" id="password_input" class="form-control">
+
+    </div>
+<!-- 
   <p>
     <label for="email_input">Email</label>
     <input type="text" name="email" id="email_input">
 
     <label for="password_input">Password</label>
     <input type="password" name="password" id="password_input">
-  </p>
-  <button class="btn btn-primary">Login<button>
+  </p> -->
+  <button class="btn btn-primary">Login</button>
 </form>
+</div>

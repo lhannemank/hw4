@@ -1,1 +1,4 @@
 /* Application styles */
+.navbar-brand {
+  margin-left: 15px; /* Adjust the value as needed */
+}
